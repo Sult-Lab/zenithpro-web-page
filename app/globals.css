@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand tokens — carried over from the ZenithPro logo system */
+  --color-teal-deep: #0b4f4a;
+  --color-teal-grad-a: #0e5f58;
+  --color-teal-grad-b: #052824;
+  --color-gold: #e8a94c;
+  --color-gold-dark: #c9821f;
+  --color-paper: #f7f5ef;
+  --color-paper-raised: #fbfaf6;
+  --color-ink: #0d1614;
+  --color-line: #dedace;
+  --color-muted: #6b6558;
+
+  /* Fonts are loaded via next/font in app/layout.tsx — these just
+     point Tailwind's font-* utilities at the resulting variables. */
+  --font-display: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
+:root {
+  /* Emil Kowalski-style easing curves — the CSS keyword defaults are
+     too weak to feel intentional. Entering/exiting elements should
+     always ease OUT, never ease-in. */
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.container-px {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .container-px {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-teal-grad-b);
+}
+
+/* Shared press-feedback for every button/CTA in the site.
+   - Named properties, not `transition: all`.
+   - transform + opacity only, so it stays off the layout/paint path.
+   - Hover-scale is gated behind (hover: hover) so touch taps don't
+     fire a false-positive hover animation.
+   - Press feedback (:active) always applies, everywhere. */
+.btn-tap {
+  transition: transform 150ms var(--ease-out-strong), opacity 150ms ease,
+    background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+  will-change: transform;
+}
+.btn-tap:active {
+  transform: scale(0.97);
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn-tap:hover {
+    transform: scale(1.015);
+  }
+}
