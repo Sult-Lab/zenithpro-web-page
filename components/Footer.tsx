@@ -24,6 +24,7 @@ const COLUMNS = [
     links: [
       { label: "Privacy policy", href: "/privacy" },
       { label: "Terms of service", href: "/terms" },
+      { label: "Delete account", href: "/delete-account" },
     ],
   },
 ];
@@ -37,7 +38,7 @@ export default function Footer() {
             <Wordmark className="text-lg" />
             <p className="mt-4 max-w-xs text-[14px] leading-relaxed text-[var(--color-ink)]/55">
               Offline-first business management for Nigerian SMEs. Sales,
-              stock, and customers — built to keep working, signal or not.
+              stock, and customers built to keep working, signal or not.
             </p>
           </div>
 
@@ -63,7 +64,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-[var(--color-line)] pt-6 text-[13px] text-[var(--color-ink)]/45 md:flex-row">
-          <p>© 2026 ZenithPro. Built for the Nomba x DevCareer Hackathon.</p>
+          <p>© 2026 ZenithPro.</p>
           <p>ZenithPro does not hold customer funds.</p>
         </div>
       </div>
