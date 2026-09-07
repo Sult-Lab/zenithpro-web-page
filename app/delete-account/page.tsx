@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import LegalLayout from "@/components/LegalLayout";
 
 export const metadata: Metadata = {
-  title: "Delete Your Account — ZenithPro",
+  title: "Delete Your Account ZenithPro",
   description: "How to request deletion of your ZenithPro account and business data.",
 };
 
@@ -26,7 +26,7 @@ function Li({ children }: { children: React.ReactNode }) {
   return <li className="text-[15px] leading-relaxed text-[var(--color-ink)]/70">{children}</li>;
 }
 
-const SUPPORT_EMAIL = "support@zenithpro.app"; // TODO: replace with your real support inbox
+const SUPPORT_EMAIL = "salamsultan09@gmail.com"; // TODO: replace with your real support inbox
 
 export default function DeleteAccountPage() {
   const mailtoHref = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(
@@ -37,23 +37,23 @@ export default function DeleteAccountPage() {
 
   return (
     <LegalLayout title="Delete your account" updated="September 6, 2026">
-      <div className="rounded-2xl border border-[var(--color-line)] bg-[var(--color-paper-raised)] p-5 text-[14px] leading-relaxed text-[var(--color-ink)]/65">
+      {/* <div className="rounded-2xl border border-[var(--color-line)] bg-[var(--color-paper-raised)] p-5 text-[14px] leading-relaxed text-[var(--color-ink)]/65">
         Replace <code className="rounded bg-black/5 px-1.5 py-0.5">{SUPPORT_EMAIL}</code>{" "}
         with your real support inbox before publishing this page or submitting
         it to Google Play.
-      </div>
+      </div> */}
 
       <section>
         <H2>1. Who this applies to</H2>
         <P>
           Every ZenithPro account belongs to a business and is assigned a
-          role — Admin, Manager, or Staff. What gets deleted depends on your
+          role Admin, Manager, or Staff. What gets deleted depends on your
           role:
         </P>
         <ul className="mt-2 list-disc space-y-2 pl-5">
           <Li>
             <strong>Business Admin:</strong> requesting deletion removes the
-            entire business — all staff accounts, branches, products,
+            entire business all staff accounts, branches, products,
             sales records, and customer data tied to it.
           </Li>
           <Li>
