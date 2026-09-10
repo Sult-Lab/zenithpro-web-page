@@ -1,0 +1,54 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.techsultan.zenithpro",
+      "sha256_cert_fingerprints": [
+        "61:B9:2C:47:A0:51:D5:45:9E:0B:B1:7D:E7:44:5B:2E:71:48:E5:17:17:8F:87:79:4B:A7:06:33:D7:D1:C6:D3"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.get_login_creds"],
+    "target": {
+      "namespace": "web",
+      "site": "https://www.zenithpro.name.ng"
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.get_login_creds"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.techsultan.zenithpro",
+      "sha256_cert_fingerprints": [
+        "61:B9:2C:47:A0:51:D5:45:9E:0B:B1:7D:E7:44:5B:2E:71:48:E5:17:17:8F:87:79:4B:A7:06:33:D7:D1:C6:D3"
+      ]
+    }
+  },
+  {
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.techsultan.zenithpro",
+    "sha256_cert_fingerprints":
+    ["DF:44:AA:F6:E3:8B:80:EF:AA:DE:6C:68:39:D6:DE:C8:7F:19:82:FE:A1:92:8D:AC:74:DD:DD:60:C0:D7:13:31"]
+  }
+},
+{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "web",
+    "site": "https://www.zenithpro.name.ng"
+  }
+},
+{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.techsultan.zenithpro",
+    "sha256_cert_fingerprints":
+    ["DF:44:AA:F6:E3:8B:80:EF:AA:DE:6C:68:39:D6:DE:C8:7F:19:82:FE:A1:92:8D:AC:74:DD:DD:60:C0:D7:13:31"]
+  }
+}
+]
