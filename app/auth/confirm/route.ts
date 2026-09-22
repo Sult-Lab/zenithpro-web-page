@@ -19,7 +19,7 @@ export async function GET(
   if (!tokenHash || !type) {
     return NextResponse.redirect(
       new URL(
-        "/auth/confirm?error=invalid_link",
+        "/auth/confirm-account?error=invalid_link",
         request.url
       )
     );
@@ -41,7 +41,7 @@ export async function GET(
 
     return NextResponse.redirect(
       new URL(
-        "/auth/confirm?error=invalid_or_expired",
+        "/auth/confirm-account?error=invalid_or_expired",
         request.url
       )
     );
